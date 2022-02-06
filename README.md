@@ -10,47 +10,74 @@ To develop a python control code to move the mobilerobot along the predefined pa
 ## Procedure
 
 Step1:
+Start
 
 <br/>
 
 Step2:
-
+From robomaster import robot
 <br/>
 
 Step3:
-
+Initialize the type
 <br/>
 
 Step4:
-
+Run the program to move the robo master through our condition
 <br/>
 
 Step5:
-
+end
 <br/>
 
 ## Program
-```python
+~~~
+Developed by : D Vishnu Vardhan Reddy
+Ref. No : 21005311
+~~~
+~~~
 from robomaster import robot
 import time
 
-if __name__ == '__main__':
+if _name_ == '_main_':
     ep_robot = robot.Robot()
     ep_robot.initialize(conn_type="ap")
 
     ep_chassis = ep_robot.chassis
 
-    ## Write your code here
+    '''
+    x = x-axis movement distance,( meters) [-5,5]
+    y = y-axis movement distance,( meters) [-5,5]
+    z = rotation about z axis ( degree)[-180,180]
+    xy_speed = xy axis movement speed,( unit meter/second) [0.5,2]
+    '''
+    ep_chassis.move(x=3.2, y=0, z=0, xy_speed=0.75).wait_for_completed()
 
+    ep_chassis.move(x=0, y=0, z=45, xy_speed=1).wait_for_completed()
 
-
-    
+    ep_chassis.move(x=1.4, y=0, z=0, xy_speed=0.75).wait_for_completed()
+    ep_chassis.move(x=0, y=0, z=90, xy_speed=1).wait_for_completed()
+    ep_chassis.move(x=1.6, y=0, z=0, xy_speed=0.75).wait_for_completed()
+    ep_chassis.move(x=0, y=0, z=-35, xy_speed=1).wait_for_completed()
+    ep_chassis.move(x=1.0, y=0, z=0, xy_speed=0.75).wait_for_completed()
+    ep_chassis.move(x=0, y=0, z=-45, xy_speed=1).wait_for_completed()
+    ep_chassis.move(x=0.5, y=0, z=0, xy_speed=0.75).wait_for_completed()
+    ep_chassis.move(x=0, y=0, z=-35, xy_speed=0.75).wait_for_completed()
+    ep_chassis.move(x=0.8, y=0, z=0, xy_speed=0.75).wait_for_completed()
+    ep_chassis.move(x=0, y=0, z=-35, xy_speed=0.75).wait_for_completed()
+    ep_chassis.move(x=0.9, y=0, z=0, xy_speed=0.75).wait_for_completed()
+    ep_chassis.move(x=0, y=0, z=-45, xy_speed=0.75).wait_for_completed()
+    ep_chassis.move(x=0.9, y=0, z=0, xy_speed=0.75).wait_for_completed()
+    ep_chassis.move(x=0, y=0, z=-45, xy_speed=0.75).wait_for_completed()
     ep_robot.close()
-```
+~~~
 
 ## MobileRobot Movement Image:
 
-![robo](./img/robomaster.png)
+![robo](./img4.png)
+![robo](./img5.png)
+![robo](./img6.png)
+
 
 Insert image here
 
@@ -64,7 +91,7 @@ Insert image here
 
 Upload your video in Youtube and paste your video-id here
 
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](https://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE)
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/SuNxxZ1zj1c/0.jpg)](https://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE)
 
 <br/>
 <br/>
